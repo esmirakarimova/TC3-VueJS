@@ -8,11 +8,12 @@ If the ref is on a child component, then `$refs` will give me that component’s
 
 The main idea is: refs are like shortcuts to DOM nodes or child components, but they should be used only when reactive binding is not enough."
 
----
 
-Отличный вопрос 👌 Дам тебе устный вариант ответа, как на интервью:
 
 ---
+
+
+
 
 # Why should we not interact with the DOM directly ?
 
@@ -24,11 +25,11 @@ Also, direct DOM manipulation breaks the separation of concerns: our logic shoul
 
 Of course, sometimes we still need direct DOM access — like when using third-party libraries or APIs that require a DOM node. In those cases, we use `refs` instead of raw DOM methods, so Vue stays aware of what’s happening."
 
----
 
-Хорошо 👍 Давай подготовим устный вариант ответа:
 
 ---
+
+
 
 # What is `nextTick` ?
 
@@ -90,6 +91,7 @@ For example, inside a child I can call `this.$parent` to access the parent’s d
 But in practice, using `$parent` and `$children` is not recommended, because it creates tight coupling between components and makes them harder to maintain. The better way is to pass data with props, emit events, or use provide/inject.
 
 So `$parent` and `$children` exist, but they’re more like escape hatches for special cases, not the main communication pattern in Vue."
+
 
 
 
